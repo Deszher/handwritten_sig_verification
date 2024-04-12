@@ -7,7 +7,7 @@ import streamlit as st
 from PIL import Image
 from tensorflow import keras
 
-data_res = ["img\\02_070.png"]
+data_res = ["img/02_070.png"]
 
 
 # предобработка изображений
@@ -82,11 +82,11 @@ with col1:
     st.header('Верификация подписи с использованием ИИ')
 
 with col2:
-    st.image("img\\example.jpg")
+    st.image("img/example.jpg")
 st.title('Верификация изображений подписи в облаке Streamlit на основе предварительно обученной модели')
 
 # Боковая панель
-st.sidebar.image("img\\example.jpg", width=100)
+st.sidebar.image("img/example.jpg", width=100)
 st.sidebar.title("О проекте:")
 st.sidebar.info(
     """
@@ -105,7 +105,7 @@ img = load_image()
 
 result = st.button('Определить подлинность подписи')
 if img and result:  # если нажата кнопка
-    name = "img\\new_img.png"
+    name = "img/new_img.png"
     img.save(name, "PNG")  # сохраняется полученное изображение
 
     with st.spinner('Wait for it...'):
